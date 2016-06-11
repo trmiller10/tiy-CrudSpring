@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 public class CrudSpringController {
 
 
-    @Autowired UserRepository
+    @Autowired UserRepository userRepository;
     //autowire noterepository
 
 
@@ -25,11 +25,17 @@ public class CrudSpringController {
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session) {
 
+        model.addAttribute("userName", session.getAttribute("userName"));
 
         return "home";
     }
 
+    @RequestMapping(path="/login", method = RequestMethod.POST)
+    public String loginUser (HttpSession session, String userName){
+        session.setAttribute("userName", userName);
 
+        return "redirect:/";
+    }
 
 /*    @Autowired
     MessageRepository messageRepository;
