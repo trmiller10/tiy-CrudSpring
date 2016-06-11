@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 public class CrudSpringController {
 
 
-    //autowire userrepository
+    //@autowire UserRepository
     //autowire noterepository
 
 
