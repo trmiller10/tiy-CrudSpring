@@ -23,7 +23,7 @@ public class CrudSpringController {
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home(/*Model model,*/ HttpSession session) {
+    public String home(Model model/*, HttpSession session*/) {
 
 
         return "home";
