@@ -12,9 +12,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class TiyCrudSpringApplicationTests {
 
     //find out what this could do
-	@Test
+/*	@Test
 	public void contextLoads() {
-	}
+	}*/
 
     /**
      * This test would assert that "/" GET route creates an HTML page

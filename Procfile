@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/demo-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=heroku -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/tiy-CrudSpring-0.0.1-SNAPSHOT.jar
