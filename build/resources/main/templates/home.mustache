@@ -6,9 +6,9 @@
         <button type="submit">Logout</button>
     </form>
 
-    <p>Enter messages</p>
+    <p>Enter notes</p>
     <form action="/add-note"  method="post">
-        <input type="text" name="note" placeholder="Enter message here">
+        <input type="text" name="note" placeholder="Enter note text here">
         <button type="submit">Add</button>
     </form>
 
@@ -17,6 +17,7 @@
     {{/notes}}
 
     {{#notes}}
+        <p>YOUR NOTES</p>
         {{noteContent}}
         <form action="/edit-note" method="post">
             <input type="text" placeholder="Edit note text" name="editNote">
@@ -27,6 +28,5 @@
         </form>
     {{/notes}}
 
-<p>ALL NOTES</p>
 </body>
 </html>
