@@ -1,6 +1,8 @@
-package com.theironyard;
+package com.theironyard.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Taylor on 6/11/16.
@@ -14,11 +16,14 @@ public class User {
     @GeneratedValue
     private int userId;
 
-    @Column
     private String userName;
-    @Column
+
     private String password;
 
+    @OneToMany(mappedBy = "user")
+    private List<Note> notes = new ArrayList<>();
+
+    public User() {}
 
     public User(String userName, String password) {
         this.userName = userName;
@@ -41,11 +46,11 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassword() {
+    public String getPasswordHash() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPasswordHash(String password) {
         this.password = password;
     }
 }

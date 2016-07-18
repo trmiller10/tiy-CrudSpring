@@ -1,4 +1,4 @@
-package com.theironyard;
+package com.theironyard.entities;
 
 import javax.persistence.*;
 
@@ -14,14 +14,16 @@ public class Note {
     @GeneratedValue
     private int noteId;
 
-    @Column
     private String noteContent;
 
-    @Column
     @ManyToOne
     private User user;
 
     public Note() {}
+
+    public Note(String noteContent){
+        this.noteContent = noteContent;
+    }
 
     public Note(String noteContent, User user) {
         this.noteContent = noteContent;
@@ -44,11 +46,4 @@ public class Note {
         this.noteContent = noteContent;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

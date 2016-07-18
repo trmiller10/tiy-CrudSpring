@@ -1,42 +1,32 @@
 <html>
 <body>
 
+    <p>Welcome, {{userName}}!</p>
+    <form action="/logout" method="post"> 
+        <button type="submit">Logout</button>
+    </form>
 
-
-{{^user}}
-<p>LOG IN</p>
-
-
-    <!--
-    Form to enter username and password
-    Submit button
-
-    Find out how to either
-    {{#error}}Catch an error that is added to model for "Incorrect password"{{/error}}
-    or
-    redirect here with "Incorrect password
-    -->
-<form action="/login" method="post"> 
-    <input type="text" placeholder="Enter your name" name="userName"/> 
-    <button type="submit">Login</button>
-</form>
-
-
-{{/user}}
-
-{{#user}}
-    Welcome, {{.}}!
+    <p>Enter notes</p>
+    <form action="/add-note"  method="post">
+        <input type="text" name="note" placeholder="Enter note text here">
+        <button type="submit">Add</button>
+    </form>
 
     {{^notes}}
         No notes to display!
     {{/notes}}
 
     {{#notes}}
-        {{user}}'s Notes:
-
+        <p>YOUR NOTES</p>
+        {{noteContent}}
+        <form action="/edit-note" method="post">
+            <input type="text" placeholder="Edit note text" name="editNote">
+            <button type="submit" name="editId" value={{noteId}}>Edit</button>
+        </form>
+        <form action="/delete-note" method="post">
+            <button type="delete" name="deleteId" value={{noteId}}>Delete</button>
+        </form>
     {{/notes}}
-{{/user}}
 
-<p>ALL NOTES</p>
 </body>
 </html>

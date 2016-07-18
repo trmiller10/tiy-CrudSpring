@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>LOG IN</p>
+<form action="/login" method="post"> 
+    <input type="text" placeholder="Enter your name" name="userName"/> 
+    <input type="text" placeholder="Enter your password" name="password"/>
+    <button type="submit">Login</button>
+    {{#error}}Incorrect Password.{{/error}}
+</form>
+</body>
+</html>
