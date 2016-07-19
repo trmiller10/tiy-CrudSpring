@@ -1,8 +1,6 @@
 package com.theironyard;
 
-import com.theironyard.entities.Note;
 import com.theironyard.entities.User;
-import com.theironyard.services.NoteRepository;
 import com.theironyard.services.UserRepository;
 import org.junit.After;
 import org.junit.Assert;
@@ -20,21 +18,14 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.util.*;
-
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TiyCrudSpringApplication.class)
 @WebAppConfiguration
 public class TiyCrudSpringApplicationTests {
-
-    //find out what this could do
-
+    
     @Autowired
     UserRepository userRepository;
-
-    @Autowired
-    NoteRepository noteRepository;
 
     @Autowired
     WebApplicationContext wap;
@@ -64,8 +55,6 @@ public class TiyCrudSpringApplicationTests {
     @After
     public void after() {
         User testUser = userRepository.findByUserName("testUser");
-        Iterable<Note> testNotes = noteRepository.findNotesByUser(testUser);
-
         userRepository.delete(testUser);
     }
 }
