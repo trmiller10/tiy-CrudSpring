@@ -23,7 +23,7 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringApplicationConfiguration(classes = TiyCrudSpringApplication.class)
 @WebAppConfiguration
 public class TiyCrudSpringApplicationTests {
-    
+
     @Autowired
     UserRepository userRepository;
 
