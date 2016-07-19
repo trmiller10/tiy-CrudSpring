@@ -60,12 +60,6 @@ public class TiyCrudSpringApplicationTests {
         );
 
         Assert.assertTrue(userRepository.findByUserName("testUser").getuserName().equals("testUser"));
-/*
-        mockMvc.perform(
-                MockMvcRequestBuilders.post("/add-note")
-                        .param("note", "This is a test note."));
-        Iterable<Note> findNotes = noteRepository.findNotesByUser(userRepository.findByUserName("testUser"));
-       */
     }
 
     @After

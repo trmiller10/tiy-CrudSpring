@@ -33,12 +33,19 @@
     </div>
 {{/notes}}
 <p>ALL NOTES</p>
-
-{{#allUsers}}
+{{^allNotes}}
+    No notes.
+{{/allNotes}}
+{{#allNotes}}
+    <ul>
+        {{noteContent}}
+    </ul>
+{{/allNotes}}
+<!--{{#allUsers}}
     <ul>
         <ol>{{#allNotes}}{{noteContent}} {{userName}}<br>{{/allNotes}}</ol>
     </ul>
-{{/allUsers}}
+{{/allUsers}}-->
 
 </body>
 </html>
