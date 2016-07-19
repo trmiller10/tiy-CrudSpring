@@ -5,7 +5,23 @@
     <input type="text" placeholder="Enter your name" name="userName"/> 
     <input type="text" placeholder="Enter your password" name="password"/>
     <button type="submit">Login</button>
-    {{#error}}Incorrect Password.{{/error}}
 </form>
+
+<p>ALL NOTES</p>
+{{^allNotes}}
+    No notes to display yet.
+{{/allNotes}}
+
+{{#allNotes}}
+    <ul>
+        {{noteContent}}
+    </ul>
+{{/allNotes}}
+<!--{{#allUsers}}
+    <ul>
+        <ol>{{#allNotes}}{{noteContent}} {{userName}}<br>{{/allNotes}} </ol>
+    </ul>
+{{/allUsers}}
+-->
 </body>
 </html>

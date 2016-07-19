@@ -45,17 +45,28 @@ public class CrudSpringController {
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String login(HttpSession session){
+    public String login(HttpSession session, Model model){
         User user = userRepository.findByUserName((String) session.getAttribute("userName"));
 
         if(user != null){
             return "redirect:/home";
         }
+
+        /*Iterable<User> allUsers = userRepository.findAll();
+        for(User listedUser : allUsers){
+            Iterable<Note> allNotes = noteRepository.findNotesByUser(listedUser);
+            model.addAttribute("allNotes", allNotes);
+        }
+        model.addAttribute("allUsers", allUsers);*/
+
+        Iterable<Note> allNotes = noteRepository.findAll();
+        model.addAttribute("allNotes", allNotes);
+
         return "login";
     }
 
     @RequestMapping(path="/login", method = RequestMethod.POST)
-    public String loginUser (HttpSession session, Model model, String userName, String password) throws Exception{
+    public String loginUser (HttpSession session, String userName, String password) throws Exception{
 
         User user = userRepository.findByUserName(userName);
 
@@ -84,10 +95,22 @@ public class CrudSpringController {
         if(user == null){
             return "redirect:/login";
         }
-        Iterable<Note> notes;
-        notes = noteRepository.findNotesByUser(user);
-        model.addAttribute("userName", user.getuserName());
+        Iterable<Note> notes = noteRepository.findNotesByUser(user);
         model.addAttribute("notes", notes);
+
+        //Iterable<User> allUsers = userRepository.findAll();
+        Iterable<Note> allNotes = noteRepository.findAll();
+      /*  for(User listedUser : allUsers){
+            Iterable<Note> findNotes = noteRepository.findNotesByUser(listedUser);
+            if(findNotes.iterator().hasNext()){
+                allNotes.add();
+            }
+        }*/
+
+        model.addAttribute("allNotes", allNotes);
+
+        //model.addAttribute("allUsers", allUsers);
+        model.addAttribute("userName", user.getuserName());
         return "home";
     }
 

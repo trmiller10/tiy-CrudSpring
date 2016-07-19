@@ -1,23 +1,28 @@
 <html>
 <body>
+<link rel="stylesheet" href="static/form.css">
 
-    <p>Welcome, {{userName}}!</p>
-    <form action="/logout" method="post"> 
+<p>Welcome, {{userName}}!</p>
+
+<form action="/logout" method="post"> 
         <button type="submit">Logout</button>
-    </form>
+</form>
+<p>Enter notes</p>
+<form action="/add-note"  method="post">
+    <input type="text" name="note" placeholder="Enter note text here">
+    <button type="submit">Add</button>
+</form>
 
-    <p>Enter messages</p>
-    <form action="/add-note"  method="post">
-        <input type="text" name="note" placeholder="Enter message here">
-        <button type="submit">Add</button>
-    </form>
+<p>YOUR NOTES</p>
 
-    {{^notes}}
-        No notes to display!
-    {{/notes}}
+ {{^notes}}
+     No notes to display!
+ {{/notes}}
 
-    {{#notes}}
-        {{noteContent}}
+
+{{#notes}}
+    {{noteContent}}
+    <div class="container">
         <form action="/edit-note" method="post">
             <input type="text" placeholder="Edit note text" name="editNote">
             <button type="submit" name="editId" value={{noteId}}>Edit</button>
@@ -25,8 +30,15 @@
         <form action="/delete-note" method="post">
             <button type="delete" name="deleteId" value={{noteId}}>Delete</button>
         </form>
-    {{/notes}}
-
+    </div>
+{{/notes}}
 <p>ALL NOTES</p>
+
+{{#allUsers}}
+    <ul>
+        <ol>{{#allNotes}}{{noteContent}} {{userName}}<br>{{/allNotes}}</ol>
+    </ul>
+{{/allUsers}}
+
 </body>
 </html>

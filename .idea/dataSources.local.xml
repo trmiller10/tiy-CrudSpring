@@ -6,5 +6,9 @@
       <introspection-scope>crudspring:*</introspection-scope>
       <resolve-scope>crudspring:*</resolve-scope>
     </data-source>
+    <data-source name="H2 - test@localhost" uuid="7b4cfb18-023c-4e74-b684-8caf8331c0d6">
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
   </component>
 </project>
