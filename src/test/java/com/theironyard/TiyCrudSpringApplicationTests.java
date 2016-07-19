@@ -67,15 +67,6 @@ public class TiyCrudSpringApplicationTests {
         Iterable<Note> testNotes = noteRepository.findNotesByUser(testUser);
 
         userRepository.delete(testUser);
-        try {
-            for (Note note : testNotes) {
-                noteRepository.delete(note);
-            }
-        }catch (NullPointerException e){
-            throw e;
-        }
     }
-
-
 }
 
