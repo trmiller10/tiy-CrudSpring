@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075a2ae-1ee2-479a-9cf7-4f21242e5eae" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/application-heroku.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-default.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java" />
     </list>
     <ignored path="tiy-CrudSpring.iws" />
@@ -118,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TiyCrudSpringApplicationTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TiyCrudSpringApplicationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="61" column="102" selection-start-line="61" selection-start-column="102" selection-end-line="61" selection-end-column="102" />
+            <state relative-caret-position="330">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +138,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-default.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application-default.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-default.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -563,10 +561,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/theironyard/controllers/CrudSpringController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.mustache" />
-        <option value="$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java" />
         <option value="$PROJECT_DIR$/build/classes/test/com/theironyard/TiyCrudSpringApplicationTests.class" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-default.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java" />
       </list>
     </option>
   </component>
@@ -1396,7 +1394,7 @@
       <workItem from="1468691574898" duration="2464000" />
       <workItem from="1468696724005" duration="7338000" />
       <workItem from="1468725708693" duration="7998000" />
-      <workItem from="1468860606605" duration="14623000" />
+      <workItem from="1468860606605" duration="14740000" />
     </task>
     <servers />
   </component>
@@ -1433,7 +1431,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78522000" />
+    <option name="totallyTimeSpent" value="78639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="23" width="1366" height="680" extended-state="0" />
@@ -1535,7 +1533,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java</url>
-          <line>53</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -1547,7 +1545,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java</url>
-          <line>66</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -2059,16 +2057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="61" column="102" selection-start-line="61" selection-start-column="102" selection-end-line="61" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2082,6 +2070,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/theironyard/TiyCrudSpringApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
